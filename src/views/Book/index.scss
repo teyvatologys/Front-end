@@ -1,0 +1,80 @@
+#book-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 96px;
+  left: 0;
+  z-index: 1;
+  object-fit: fill;
+}
+
+#book {
+  height: calc(100% - 96px);
+  z-index: 5;
+  position: absolute;
+  top: 96px;
+  left: 0;
+  margin: 0 15%;
+  color: white;
+
+  #book-content {
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: 0;
+    font-size: 1.5rem;
+
+    > .book-title-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem 0;
+
+      > .book-title {
+        width: 70%;
+        text-align: center;
+        font-family: "Noto Serif", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+  
+        > .title-decoration-line {
+          max-width: 90%;
+          height: auto;
+        }
+      }
+    }
+
+    > .footer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > .footer {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        #footer-decoration-line {
+          width: 100% !important;
+          height: auto !important;
+          margin-bottom: 3rem;
+        }
+
+        #the-end {
+          width: 20%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  #book-content::-webkit-scrollbar {
+    display: none;
+  }
+}
