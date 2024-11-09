@@ -1,0 +1,20 @@
+.header-bar-left {
+  display: flex;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  cursor: pointer;
+
+  .logo {
+    width: 64px;
+    height: 64px;
+    margin-right: 1rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+    user-select: none;
+  }
+}

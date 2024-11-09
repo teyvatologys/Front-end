@@ -1,0 +1,52 @@
+@import '../../library/scss/font-family';
+
+.signin-form {
+  font-size: 1.5rem !important;
+
+  .login-container {
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include noto-sans;
+    font-weight: 400;
+
+    > button {
+      background: none;
+      border: none;
+      outline: none;
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      cursor: pointer;
+      color: #2a70ce;
+    }
+  }
+}
+
+.verification-code-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div.divider {
+    height: 21px;
+    width: 0;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    margin-left: 8px;
+  }
+
+  .send-code-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    color: white;
+  }
+
+  .send-code-button:disabled {
+    cursor: not-allowed;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

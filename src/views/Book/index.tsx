@@ -17,9 +17,13 @@ export default function Book() {
   const [book, setBook] = useState<BookFamily>()
   useEffect(() => {
     if (!id) return
-    bookController().getById({ id })
+    bookController().getById(id)
       .then(response => {
-        setBook(response)
+        if (response.status === 200) {
+          setBook(response.data)
+        } else {
+          console.error(response)
+        }
       })
       .catch(console.error)
   }, [id])

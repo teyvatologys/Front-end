@@ -1,0 +1,64 @@
+.my-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 80px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  font-size: inherit;
+  margin-right: -14px;
+
+  .button-decoration-line {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  .star {
+    width: 16px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .star-1 {
+    left: 0;
+    transform: translate(-1px, 0);
+    z-index: 1;
+  }
+
+  .star-2 {
+    right: 0;
+    transform: translate(1px, 0);
+    z-index: 1;
+  }
+
+  > span {
+    z-index: 1;
+  }
+}
+
+.my-button-container::before {
+  $margin-width: 7px;
+  $margin-height: 3px;
+
+  content: '';
+  position: absolute;
+  top: $margin-height;
+  left: $margin-width;
+  width: calc(100% - #{$margin-width * 2});
+  height: calc(100% - #{$margin-height * 2});
+  background-color: transparent;
+  z-index: 0; // Ensure the pseudo-element is behind the content
+}
+
+.my-button-container:hover {
+  color: #efb44e;
+  
+  &::before {
+    background-color: rgba(60, 64, 74); // Background color on hover
+  }
+}

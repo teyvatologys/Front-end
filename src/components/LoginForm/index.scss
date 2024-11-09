@@ -1,0 +1,142 @@
+@import '../../library/scss/_font-family.scss';
+
+$input-container-width: 80%;
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(37, 41, 52);
+  border-radius: 8px;
+  width: 500px;
+  font-size: 1.75rem;
+
+  > .title {
+    font-size: 1em;
+    margin: 1rem 0;
+    @include noto-sans;
+    font-weight: 700;
+  }
+
+  .root-input-container {
+    width: $input-container-width;
+
+    .input-container {
+      background-color: rgba(50, 57, 72);
+      color: white;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 0.75em;
+      width: auto;
+
+      > input {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: inherit;
+        width: 100%;
+        font-size: inherit;
+        padding: 0;
+      }
+
+      > input::placeholder {
+        color: inherit;
+        opacity: 0.5;
+        font-size: inherit;
+      }
+    }
+
+    .input-container.invalid {
+      border: 1px solid red;
+
+      > input {
+        color: red;
+      }
+
+      .input-tooltip {
+        font-size: 0.7em;
+        color: red;
+        background-color: white;
+      }
+    }
+
+    .login-button-container {
+      cursor: pointer;
+      background-color: rgba(106, 170, 140);
+      border: none;
+      width: 100%;
+      color: inherit;
+      border-radius: 16px;
+      height: 56px;
+      font-size: 0.75em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+
+      > .loader-spinner {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .login-button-container:disabled {
+      background-color: rgba(106, 170, 140, 0.5);
+      cursor: not-allowed;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .support-buttons-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .support-button {
+        color: #2a70ce;
+        border: none;
+        background: transparent;
+        font-size: 0.6em;
+      }
+
+      .support-button:hover {
+        cursor: pointer;
+      }
+    }
+
+    .login-with-3rd-party-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include noto-sans;
+      font-size: 0.6em;
+      margin-top: 24px;
+
+      > span {
+        margin-bottom: 8px;
+      }
+
+      .third-party-login-container {
+        display: flex;
+
+        .third-party-login-button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          > img {
+            width: 32px;
+            height: 32px;
+            margin: 0 8px;
+          }
+        }
+      }
+    }
+  }
+}

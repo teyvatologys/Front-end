@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@teyvatology/teyvatapi-client": "^1.0.0",
+    "@teyvatology/teyvatapi-client": "1.8.0-dev",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loader-spinner": "^6.1.6",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "react-tooltip": "^5.28.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
