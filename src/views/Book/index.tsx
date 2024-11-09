@@ -2,7 +2,7 @@ import './index.scss'
 import { BookFamily } from '@teyvatology/teyvatapi-client'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { bookController } from '../../utils/controllers'
+import { bookController } from '../../utils/apis/controllers'
 import Vol from '../../components/Vol'
 import HeaderBar from '../../components/HeaderBar'
 

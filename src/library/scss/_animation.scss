@@ -1,4 +1,4 @@
-.glover-button {
+.glover-button-container {
   width: 40px;
   height: 40px;
   border: none;
@@ -11,7 +11,7 @@
   background: #364c59;
 }
 
-.glover-button:before {
+.glover-button-container:before {
   content: '';
   background: linear-gradient(45deg, #8c52ff, #b367c4, #df7f7f, #ff914d, #8c52ff);
   position: absolute;
@@ -27,11 +27,11 @@
   border-radius: 10px;
 }
 
-.glover-button:hover:before {
+.glover-button-container:hover:before {
   opacity: 1;
 }
 
-.glover-button:after {
+.glover-button-container:after {
   z-index: -1;
   content: '';
   position: absolute;

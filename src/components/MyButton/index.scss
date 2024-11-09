@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 20vw;
-  height: 80px;
+  height: 112px;
   position: relative;
   cursor: pointer;
   user-select: none;
@@ -38,12 +38,13 @@
 
   > span {
     z-index: 1;
+    padding: 1rem 0;
   }
 }
 
 .my-button-container::before {
   $margin-width: 7px;
-  $margin-height: 3px;
+  $margin-height: 9px;
 
   content: '';
   position: absolute;

@@ -2,7 +2,7 @@ import '../LoginForm/index.scss'
 import './index.scss'
 
 import LeftHeader from '../LeftHeader'
-import { userController } from '../../utils/controllers'
+import { userController } from '../../utils/apis/controllers'
 import { useState } from 'react'
 import { ColorRing } from 'react-loader-spinner'
 import OAuthLogin from '../OAuthLogin'

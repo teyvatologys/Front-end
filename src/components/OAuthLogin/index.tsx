@@ -1,5 +1,5 @@
 import GoogleIcon from '../../assets/google.png'
-import { oauthController } from '../../utils/controllers'
+import { oauthController } from '../../utils/apis/controllers'
 
 interface GetLinkResponse {
   url: string

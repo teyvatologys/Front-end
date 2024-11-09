@@ -42,5 +42,15 @@
         font-size: inherit;
       }
     }
+
+    .glover-button-container {
+      > .button {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    }
   }
 }

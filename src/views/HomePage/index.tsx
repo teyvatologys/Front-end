@@ -6,12 +6,28 @@ import SevenElements from '../../assets/7-elements.png'
 import HomePageDecorationLine1 from '../../assets/home-page-decoration-line.png'
 import HomePageDecorationLine2 from '../../assets/home-page-decoration-line-2.png'
 import MyButton from '../../components/MyButton'
+import { useEffect } from 'react'
+import { useAppDispatch } from '../../store'
+import { exchangeUserInfo } from '../../utils/apis/user'
+import { useNavigate } from 'react-router-dom'
 
 export default function HomePage() {
   const lines = [
     ['Nations', 'Books', 'Dictionary'],
     ['Resourses', 'Characters', 'Weapons', 'Affiliations']
   ]
+
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const token = urlParams.get('token')
+    if (token) { // If token is not undefined, then this is a redirect from the oauth login)
+      void dispatch(exchangeUserInfo({ token })).unwrap()
+        .then(() => navigate('/home'))
+    }
+  }, [dispatch, navigate])
 
   return (
     <>
